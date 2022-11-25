@@ -1,11 +1,12 @@
 import random
 print("Welcome to Guess The Number!")
-lb = int(input("Enter the lower bound of the range: "))
-ub = int(input("Enter the upper bound of the range: "))
+lb = int(input("Enter the lower bound of the guessing range: "))
+ub = int(input("Enter the upper bound of the guessing range: "))
 score = 0
 timesPlayed = 0
 while(True):
     chances = 3
+    print(f"\nGuess the number between {lb} - {ub} (both included).\n")
     a = "Enter your guess: "
     newNum = random.randint(lb, ub)
     f = 0
@@ -26,8 +27,11 @@ while(True):
     timesPlayed += 1
     if (f == 0):
         print("The number was:", newNum, ":(")
-    choice = input("Enter 'q' to quit and anything else to  play again: ")
+    choice = input("Enter 'q' to quit and 'enter' to play again: ")
     if (choice == 'q'):
         break
 
-print("You played", timesPlayed, "times and your score is:", score)
+a = "times"
+if timesPlayed == 1:
+    a = "time"
+print("You played", timesPlayed, a,"and your score is:", score)
