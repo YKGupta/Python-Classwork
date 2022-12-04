@@ -3,7 +3,11 @@ l = []
 n = int(input("Enter range: "))
 for i in range(n):
     l.append(int(input("Enter the element: ")))
-f = 1
-for i in l:
-    f *= i
-print("Multiplication is:", f)
+
+def multiplyAll(l):
+    f = 1
+    for i in l:
+        f *= i
+    print("Multiplication is:", f)
+
+multiplyAll(l)
