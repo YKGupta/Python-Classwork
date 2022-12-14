@@ -9,5 +9,7 @@ for i in range(n):
 
 target = int(input("Enter the target sum: "))
 for i in range(len(l)-1):
+    if(l[i] == l[i+1]):
+        continue
     if (l[i] + l[i+1] == target):
         print(i+1, i+2)
